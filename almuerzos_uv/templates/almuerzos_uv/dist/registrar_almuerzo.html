@@ -1,0 +1,17 @@
+<!-- almuerzos_uv/templates/almuerzos_uv/registrar_almuerzo.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrar Almuerzo</title>
+</head>
+<body>
+    <h1>Registrar Almuerzo</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Aceptar</button>
+    </form>
+</body>
+</html>
+
