@@ -23,5 +23,10 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('almuerzos/', include('almuerzos_uv.urls')),
+    #path('almuerzos/', include('almuerzos_uv.urls')),
+    #vista para index
+    ##path('', index, name='index'),
+    ##path('', views.index, name='index'),
+
     path('', views.home, name='home'),  # Añadir esta línea para la página de inicio
 ]

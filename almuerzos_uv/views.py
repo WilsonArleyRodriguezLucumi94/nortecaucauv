@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.utils import timezone
 from .forms import AlmuerzoForm
-from .models import Almuerzo
+from .models import Estudiante
 # Create your views here.
 
 def registrar_almuerzo(request):
@@ -32,3 +32,10 @@ def registrar_estudiante(request):
         form = EstudianteForm()
     return render(request, 'almuerzos_uv/registrar_estudiante.html', {'form': form})
 
+
+def lista_estudiantes(request):
+    estudiantes = Estudiante.objects.all()
+    return render(request, 'almuerzos_uv/lista_estudiantes.html', {'estudiantes': estudiantes})
+
+def index_almuerzos(request):
+    return render(request, 'almuerzos_uv/index.html')
